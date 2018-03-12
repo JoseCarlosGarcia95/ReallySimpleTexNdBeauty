@@ -1,0 +1,68 @@
+\documentclass[twoside,11pt]{TrabajosTex}
+
+\title{Práctica 1}
+
+\author{Autores}
+
+\cita{Defiende tu derecho a pensar, porque incluso pensar de manera errónea es mejor que no pensar.}
+\autorcita{Hipátia de Alejandría}
+
+\begin{document}
+	\maketitle
+	
+	\section{Práctica 1}
+	
+	\subsubsection{Preeliminares}
+	Dado que mi ordenador utiliza como sistema operativo Debian 9 (GNU/Linux) la manera de instalar el paquete de \textit{EquationType} ha sido diferente.
+	
+	\begin{enumerate}
+		\item Ejecutamos \textit{cd /usr/local/Wolfram/Mathematica/10.4/AddOns/Packages}
+		\item \textit{mkdir EquationType}
+		\item \textit{cd EquationType}
+		\item \textit{mv ficherodelpaquete .}
+	\end{enumerate}
+
+	Luego, cargamos el paquete de \textit{EquationType}:
+	
+	\begin{lstlisting}
+Needs["EquationType`"]
+	\end{lstlisting}
+	
+	Y calculamos, las ecuaciones:
+	
+	\begin{lstlisting}
+EquationType[eqn, {x, y}]
+	\end{lstlisting}
+	\subsubsection{Ecuación a}
+	\begin{empheq}[box={\mybluebox[5pt]}]{equation*}
+		u_{xx} - 3 u_{xy} + 2 u _{yy} = 0
+	\end{empheq}
+	
+	Es hiperbólica con discriminante $\frac{1}{4}$
+	\subsubsection{Ecuación b}
+	\begin{empheq}[box={\mybluebox[5pt]}]{equation*}
+		a^u_{xx} + 2au_{xy} + u_{yy} = 0
+	\end{empheq}
+	
+	Es parabólica con discriminante 0.
+
+	\subsubsection{Ecuación c}
+	\begin{empheq}[box={\mybluebox[5pt]}]{equation*}
+		2u_{xt} + 3u_{tt} = 0
+	\end{empheq}
+	
+	Es hiperbólica con discriminante 1.
+
+	\subsubsection{Eucación d}
+	\begin{empheq}[box={\mybluebox[5pt]}]{equation*}
+		u_{xx} + x^2 u_{yy} = 0
+	\end{empheq}
+
+	Es indeterminada con discriminante $-x^2$.
+	\subsubsection{Ecuación e}
+	\begin{empheq}[box={\mybluebox[5pt]}]{equation*}
+		x^2 u_{xx} + 2xyu_{xy} + y^2 u_{yy} = 0
+	\end{empheq}
+	
+	Es parabólica con discriminante 0.
+\end{document}
